@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{%  load crispy_forms_tags %}
+{% block content %}
+<form style="width:50% ; margin : auto" action="" method="post">
+    <h2>add catagory</h2>
+    {% csrf_token %}
+    {{data | crispy}}
+    <button class='btn btn-warning'>Submit</button>
+</form>
+{% endblock content %}
