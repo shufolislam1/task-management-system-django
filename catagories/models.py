@@ -7,3 +7,5 @@ class catagoryModel(models.Model):
         catagoryName = models.CharField(max_length = 20)
         task = models.ManyToManyField(taskModel)
 # hello
+
+# hello 2
