@@ -7,7 +7,7 @@ def add_task(request):
         task_form = task_Model_Form(request.POST)
         if task_form.is_valid():
             task_form.save()
-            return redirect('addTask')
+            return redirect('homepage')
         
     else:
         task_form = task_Model_Form()

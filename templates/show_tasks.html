@@ -1,4 +1,21 @@
-{% extends "base.html" %}
-{% block content %}
-<h2>show all task here</h2>
+{% extends "base.html" %} {% block content %}
+<div class="d-flex flex-wrap justify-content-center px-3 pt-5">
+    {% for post in data %}  
+    <div class="card m-3" style="">
+      <div class="card-body">
+        <h5 class="card-title">{{post.taskTitle}}</h5>
+        <p class="card-text">
+            {{post.taskDescription}}
+        </p>
+        <p>
+            Catagory:{% for cata in post.taskCatagories.all %}
+            <button class="btn btn-primary m-2 text-warning" disabled>{{ cata.CatagoryName }}</button>
+            {% endfor %}
+        </p>
+        {% comment %} <a href="{% url "editPost" post.id %}" class="btn btn-warning">Edit</a>
+        <a href="{% url "deletePost" post.id %}" class="btn btn-warning">Delete</a> {% endcomment %}
+      </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}

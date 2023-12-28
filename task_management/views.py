@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from task.models import taskModel
 
 def showTasks(request):
-    return render(request, 'show_tasks.html')
+    data = taskModel.objects.all()
+    return render(request, 'show_tasks.html', {'data':data})

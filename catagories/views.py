@@ -7,7 +7,7 @@ def add_catagory(request):
         addCatagory = catagory_model_form(request.POST)
         if addCatagory.is_valid():
             addCatagory.save()
-            return redirect('addCatagory')
+            return redirect('homepage')
         
     else:
         addCatagory = catagory_model_form()
