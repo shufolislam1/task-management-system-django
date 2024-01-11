@@ -13,8 +13,8 @@
             <button class="btn btn-primary m-2">{{cata.catagoryName}}</button>
             {% endfor %}
         </div>
-        {% comment %} <a href="{% url "editPost" post.id %}" class="btn btn-warning">Edit</a>
-        <a href="{% url "deletePost" post.id %}" class="btn btn-warning">Delete</a> {% endcomment %}
+        <a href="{% url "editTask" post.id %}" class="btn btn-warning">Edit</a>
+        <a href="{% url "deleteTask" post.id %}" class="btn btn-warning">Delete</a>
       </div>
     </div>
     {% endfor %}
