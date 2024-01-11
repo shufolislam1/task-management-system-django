@@ -7,11 +7,12 @@
         <p class="card-text">
             {{post.taskDescription}}
         </p>
-        <p>
-            Catagory:{% for cata in post.taskCatagories.all %}
-            <button class="btn btn-primary m-2 text-warning" disabled>{{ cata.CatagoryName }}</button>
+        <div>
+            <h4>Catagory: </h4>
+            {% for cata in post.taskCatagories.all %}
+            <button class="btn btn-primary m-2">{{cata.catagoryName}}</button>
             {% endfor %}
-        </p>
+        </div>
         {% comment %} <a href="{% url "editPost" post.id %}" class="btn btn-warning">Edit</a>
         <a href="{% url "deletePost" post.id %}" class="btn btn-warning">Delete</a> {% endcomment %}
       </div>
