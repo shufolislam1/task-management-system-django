@@ -11,5 +11,6 @@ def add_task(request):
         
     else:
         task_form = task_Model_Form()
+    print(task_form)
     return render(request, 'add_task.html', {'data':task_form})
     
